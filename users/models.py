@@ -25,6 +25,7 @@ class User(AbstractUser):
 )
 
     def __str__(self):
-     return self.firstname + " " + self.lastname
+      return f"{self.first_name or ''} {self.last_name or ''}".strip() or self.username
+
     
     
